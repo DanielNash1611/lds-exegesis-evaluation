@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "lds-exegesis-evaluation": {
+      "cwd": "../..",
+      "command": "npm",
+      "args": [
+        "run",
+        "mcp:stdio",
+        "--silent"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-labelledby="title description">
+  <title id="title">LDS Exegesis Evaluation</title>
+  <desc id="description">An open book beside the words LDS Exegesis Evaluation.</desc>
+  <rect width="320" height="96" rx="8" fill="#F6F8F5"/>
+  <g transform="translate(16 16)">
+    <rect width="64" height="64" rx="10" fill="#176B5B"/>
+    <path d="M12 13h15c5 0 9 4 9 9v27c-2-3-5-5-9-5H12V13Z" fill="#FFFFFF"/>
+    <path d="M52 13H37c-5 0-9 4-9 9v27c2-3 5-5 9-5h15V13Z" fill="#D8A64A"/>
+    <path d="M32 20v26" stroke="#17423A" stroke-width="2"/>
+  </g>
+  <text x="96" y="42" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173B35">LDS Exegesis</text>
+  <text x="96" y="68" font-family="Arial, sans-serif" font-size="18" fill="#445A55">Evaluation</text>
+</svg>

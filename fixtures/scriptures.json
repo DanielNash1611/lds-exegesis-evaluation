@@ -1,0 +1,82 @@
+{
+  "chapters": [
+    {
+      "book": "John",
+      "chapter": 3,
+      "sourceName": "King James Version fixture",
+      "sourceUrl": "https://www.kingjamesbibleonline.org/John-3-16/",
+      "licenseNote": "KJV text is treated as public domain in the United States. Fixture is for deterministic development tests.",
+      "verses": [
+        {
+          "verse": 16,
+          "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
+        }
+      ]
+    },
+    {
+      "book": "Matthew",
+      "chapter": 5,
+      "sourceName": "King James Version fixture",
+      "sourceUrl": "https://www.kingjamesbibleonline.org/Matthew-Chapter-5/",
+      "licenseNote": "KJV text is treated as public domain in the United States. Fixture is for deterministic development tests.",
+      "verses": [
+        {
+          "verse": 14,
+          "text": "Ye are the light of the world. A city that is set on an hill cannot be hid."
+        },
+        {
+          "verse": 15,
+          "text": "Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house."
+        },
+        {
+          "verse": 16,
+          "text": "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."
+        }
+      ]
+    },
+    {
+      "book": "Mosiah",
+      "chapter": 2,
+      "sourceName": "Development fixture, Book of Mormon public-domain text line",
+      "licenseNote": "Fixture uses a short public-domain development sample and is not a substitute for the official current edition.",
+      "verses": [
+        {
+          "verse": 17,
+          "text": "When ye are in the service of your fellow beings ye are only in the service of your God."
+        }
+      ]
+    },
+    {
+      "book": "Doctrine and Covenants",
+      "chapter": 121,
+      "sourceName": "Development fixture, public-domain Latter-day Saint scripture sample",
+      "licenseNote": "Fixture is intentionally limited and is not a substitute for the official current edition.",
+      "verses": [
+        {
+          "verse": 41,
+          "text": "No power or influence can or ought to be maintained by virtue of the priesthood."
+        },
+        {
+          "verse": 42,
+          "text": "By kindness, and pure knowledge, which shall greatly enlarge the soul without hypocrisy."
+        },
+        {
+          "verse": 43,
+          "text": "Reproving betimes with sharpness, when moved upon by the Holy Ghost."
+        },
+        {
+          "verse": 44,
+          "text": "Then showing forth afterwards an increase of love toward him whom thou hast reproved."
+        },
+        {
+          "verse": 45,
+          "text": "Let thy bowels also be full of charity towards all men."
+        },
+        {
+          "verse": 46,
+          "text": "The Holy Ghost shall be thy constant companion."
+        }
+      ]
+    }
+  ]
+}

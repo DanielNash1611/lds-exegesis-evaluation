@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">LDS Exegesis Evaluation</title>
+  <rect width="64" height="64" rx="12" fill="#176B5B"/>
+  <path d="M14 15h15c5 0 9 4 9 9v25c-2-3-5-5-9-5H14V15Z" fill="#F6F8F5"/>
+  <path d="M50 15H35c-5 0-9 4-9 9v25c2-3 5-5 9-5h15V15Z" fill="#D8A64A"/>
+  <path d="M32 22v24" stroke="#17423A" stroke-width="2"/>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "name": "lds-exegesis-evaluation",
+  "version": "0.1.0",
+  "description": "Evaluate LDS scripture interpretations with deterministic references, required source perspectives, and a validated result UI.",
+  "author": {
+    "name": "Daniel Nash"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "LDS Exegesis Evaluation",
+    "shortDescription": "Test scripture interpretations against text, context, and LDS sources.",
+    "longDescription": "A non-authoritative LDS exegesis evaluation assistant with deterministic scripture parsing, modern prophetic and scholarly source coverage, structured validation, and an interactive result view.",
+    "developerName": "Daniel Nash",
+    "category": "Education",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "brandColor": "#176B5B",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.svg",
+    "defaultPrompt": [
+      "Evaluate whether Mosiah 2:17 defines service as worship.",
+      "Test my interpretation of 2 Nephi 25:23 against its immediate and canonical context.",
+      "Fetch and normalize Doctrine and Covenants 121:41-46."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
