@@ -37,6 +37,10 @@ The `api/index.ts` Vercel Function exports the same Express app used locally. A 
 https://<deployment-host>/mcp
 ```
 
+Production service: [lds-exegesis-evaluation.vercel.app](https://lds-exegesis-evaluation.vercel.app/)
+
+MCP endpoint: `https://lds-exegesis-evaluation.vercel.app/mcp`
+
 The root URL returns a small service descriptor with the exact MCP URL. No API keys or external source credentials are required for the fixture-backed MVP. The endpoint is intentionally read-only and unauthenticated; add authentication before introducing private providers or user data.
 
 ## ChatGPT Developer Mode Setup

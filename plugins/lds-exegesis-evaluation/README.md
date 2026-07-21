@@ -7,7 +7,7 @@ This local plugin packages the LDS exegesis evaluation workflows and connects th
 - `evaluate-lds-exegesis`: complete evaluation workflow and authority boundary.
 - `fetch-scripture-context`: deterministic reference parsing and scripture retrieval.
 - `audit-exegesis-citations`: source, score, schema, and language review.
-- Local stdio MCP registration for all four tools.
+- Hosted Streamable HTTP MCP registration for all four tools.
 - The versioned exegesis result widget served by `render_exegesis_result`.
 
 ## Local Install
@@ -16,7 +16,7 @@ The package is designed for a personal local marketplace entry at `~/.agents/plu
 
 After the package is copied and the marketplace entry is created, restart the ChatGPT desktop app. Open the Plugins Directory, select the personal source, install `LDS Exegesis Evaluation`, and test it in a new ChatGPT Work mode or Codex conversation.
 
-The `.mcp.json` file resolves the development server two directories above the source plugin. That supports repository-local development without publishing a machine-specific absolute path. A marketplace that copies only the plugin directory should use the hosted app binding described below instead.
+The `.mcp.json` file points to the public, read-only Streamable HTTP endpoint at `https://lds-exegesis-evaluation.vercel.app/mcp`. Local development can still use `npm run mcp:stdio` or `npm run mcp:http` from the repository root.
 
 ## Link A Developer Mode App
 

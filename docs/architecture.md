@@ -46,6 +46,8 @@ The HTTP transport is stateless: every `POST /mcp` request creates and closes it
 
 The public endpoint has no authentication because it exposes only local fixtures, schemas, and validation. Authentication becomes required before adding private corpora, user-specific state, write tools, or metered external providers.
 
+The current production endpoint is `https://lds-exegesis-evaluation.vercel.app/mcp`. The Vercel project is connected to the public GitHub repository, so pushes to `main` produce production deployments.
+
 ## Local Commands
 
 ```bash

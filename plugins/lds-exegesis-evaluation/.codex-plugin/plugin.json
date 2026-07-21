@@ -1,6 +1,6 @@
 {
   "name": "lds-exegesis-evaluation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Evaluate LDS scripture interpretations with deterministic references, required source perspectives, and a validated result UI.",
   "author": {
     "name": "Daniel Nash"
