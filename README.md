@@ -45,10 +45,12 @@ The root URL returns a small service descriptor with the exact MCP URL. No API k
 
 ## ChatGPT Developer Mode Setup
 
-1. Start the HTTP server with `npm run mcp:http`.
-2. Expose the local port through an HTTPS tunnel.
-3. Use the tunneled URL plus `/mcp` when creating the app in ChatGPT Developer Mode.
+1. Enable Developer Mode in ChatGPT.
+2. Create an app using `https://lds-exegesis-evaluation.vercel.app/mcp`.
+3. Copy the resulting `plugin_asdk_app...` ID if you want to add `.app.json` wiring to the bundled plugin.
 4. Refresh the app after changing tool descriptions, output schemas, server instructions, or UI resource metadata.
+
+For local transport development, run `npm run mcp:http` and expose the local port through an HTTPS tunnel instead.
 
 ## Tool Surface
 
@@ -61,9 +63,9 @@ The render tool returns `structuredContent` with the validated evaluation and a 
 
 ## Local Plugin Package
 
-The installable local plugin lives at `plugins/lds-exegesis-evaluation`. It bundles three repeatable skills, launches this repo's stdio MCP server, and exposes the validated-result widget in supported ChatGPT/Codex plugin surfaces.
+The installable local plugin lives at `plugins/lds-exegesis-evaluation`. It bundles three repeatable skills, connects to the hosted MCP endpoint, and exposes the validated-result widget in supported ChatGPT/Codex plugin surfaces.
 
-The local package deliberately omits `.app.json` until ChatGPT creates a real Developer Mode app ID. This keeps the local MCP plugin usable now without shipping a fake connector. See the plugin README for local installation and later app-ID wiring.
+The local package deliberately omits `.app.json` until ChatGPT creates a real Developer Mode app ID. The `.mcp.json` connection remains usable without shipping a fake app binding. See the plugin README for local installation and later app-ID wiring.
 
 ## Source Boundaries
 
