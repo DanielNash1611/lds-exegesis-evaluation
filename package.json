@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Deterministic MCP foundation for an LDS exegesis evaluation assistant.",
   "engines": {
-    "node": ">=20"
+    "node": "22.x"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",

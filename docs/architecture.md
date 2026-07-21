@@ -11,7 +11,7 @@ This repo is an MVP foundation for moving an existing Custom GPT into a determin
 - `render_exegesis_result` validates a structured evaluation and returns path-level errors plus a card-oriented UI payload.
 - `web/exegesis-result.html` is a self-contained MCP Apps UI resource registered on the render tool.
 - `src/mcp/http-server.ts` exposes a local Streamable HTTP `/mcp` endpoint for Developer Mode testing.
-- `src/mcp/http-app.ts` owns the shared Express routes, while root `server.ts` exports that app for Vercel's Node.js runtime.
+- `src/mcp/http-app.ts` owns the shared Express routes, while `api/index.ts` exports that app as a Vercel Function and `vercel.json` preserves the public `/mcp` route.
 - `plugins/lds-exegesis-evaluation` packages the workflows, local MCP registration, and UI metadata for installation from a personal plugin marketplace.
 
 ## Non-Authoritative Evaluation Baseline

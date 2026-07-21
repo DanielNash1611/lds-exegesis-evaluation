@@ -31,7 +31,7 @@ The local MCP endpoint is `http://127.0.0.1:3000/mcp` by default. Set `PORT=3017
 
 ## Hosted MCP Endpoint
 
-The root `server.ts` exports the same Express app for Vercel's Node.js runtime. Vercel terminates HTTPS and exposes the stateless Streamable HTTP endpoint at:
+The `api/index.ts` Vercel Function exports the same Express app used locally. A catch-all rewrite preserves `/mcp`, while Vercel terminates HTTPS and exposes the stateless Streamable HTTP endpoint at:
 
 ```text
 https://<deployment-host>/mcp

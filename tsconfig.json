@@ -12,5 +12,5 @@
     "rootDir": ".",
     "types": ["node", "vitest"]
   },
-  "include": ["server.ts", "src/**/*.ts", "tests/**/*.ts"]
+  "include": ["api/**/*.ts", "src/**/*.ts", "tests/**/*.ts"]
 }
