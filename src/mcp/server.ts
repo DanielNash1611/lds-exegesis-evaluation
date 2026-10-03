@@ -40,7 +40,7 @@ function textResult(text: string, structuredContent: unknown) {
   };
 }
 
-export function createExegesisMcpServer() {
+export function createExegesisMcpServer(recordUsage?: (name: "scripture_fetched" | "sources_found" | "evaluation_requested" | "evaluation_completed" | "result_rendered") => Promise<void>) {
   const server = new McpServer(
     { name: "lds-exegesis-evaluation-assistant", version: "0.1.0" },
     { instructions: EXEGESIS_SERVER_INSTRUCTIONS }
@@ -97,6 +97,7 @@ export function createExegesisMcpServer() {
     },
     async (input) => {
       const output = await fetchScriptureReference(input);
+      if (output.ok) await recordUsage?.("scripture_fetched");
       return textResult(
         output.ok
           ? `Fetched ${output.normalizedReference ?? "scripture reference"}.`
@@ -118,6 +119,7 @@ export function createExegesisMcpServer() {
     },
     async (input) => {
       const output = await findExegesisSources(input);
+      await recordUsage?.("sources_found");
       return textResult("Returned exegesis source candidates and known limitations.", output);
     }
   );
@@ -133,7 +135,9 @@ export function createExegesisMcpServer() {
       annotations: READ_ONLY_ANNOTATIONS
     },
     async (input) => {
+      await recordUsage?.("evaluation_requested");
       const output = await evaluateExegesisContract(input);
+      await recordUsage?.("evaluation_completed");
       return textResult("Returned the standard exegesis evaluation contract.", output);
     }
   );
@@ -157,6 +161,7 @@ export function createExegesisMcpServer() {
     },
     async (input) => {
       const output = renderExegesisResult(input);
+      if (output.ok) await recordUsage?.("result_rendered");
       return textResult(output.ok ? "Validated exegesis result." : "Exegesis result failed validation.", output);
     }
   );

@@ -2,6 +2,7 @@ import { createMcpExpressApp } from "@modelcontextprotocol/sdk/server/express.js
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import type { Request, Response } from "express";
 import { createExegesisMcpServer } from "./server.js";
+import { createUsageRecorder } from "../analytics.js";
 
 type HttpAppOptions = {
   host?: string;
@@ -25,7 +26,7 @@ export function createExegesisHttpApp(options: HttpAppOptions = {}) {
   });
 
   app.post("/mcp", async (req: Request, res: Response) => {
-    const server = createExegesisMcpServer();
+    const server = createExegesisMcpServer(createUsageRecorder(req.header("dnt") === "1" || req.header("sec-gpc") === "1"));
     const transport = new StreamableHTTPServerTransport({
       sessionIdGenerator: undefined
     });
