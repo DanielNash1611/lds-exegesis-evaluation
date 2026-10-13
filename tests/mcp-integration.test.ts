@@ -3,7 +3,7 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 import { afterEach, describe, expect, it } from "vitest";
 import { EXEGESIS_RESULT_WIDGET_URI } from "../src/mcp/server.js";
 import type { SourceSearchResult } from "../src/schemas/index.js";
-import { completeEvaluation } from "./evaluation-schema.test.js";
+import { completeEvaluation } from "./fixtures/evaluation.js";
 
 const transports: StdioClientTransport[] = [];
 const clients: Client[] = [];

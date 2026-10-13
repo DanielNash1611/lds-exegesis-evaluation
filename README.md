@@ -11,7 +11,12 @@ npm install
 npm test
 npm run typecheck
 npm run build
+npm run test:built-mcp
 ```
+
+CI runs these checks on Node 22 and 24. The built MCP smoke starts the compiled
+HTTP and stdio servers, exercises local scripture/evaluation fixtures and the
+widget resource, and disables telemetry. It needs no credentials or model service.
 
 ## MCP Transports
 
