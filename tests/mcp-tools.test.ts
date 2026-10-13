@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { evaluateExegesisContract, renderExegesisResult } from "../src/mcp/tools.js";
 import { createExegesisMcpServer } from "../src/mcp/server.js";
-import { completeEvaluation } from "./evaluation-schema.test.js";
+import { completeEvaluation } from "./fixtures/evaluation.js";
 
 describe("MCP tool handlers", () => {
   it("returns helpful validation errors from render_exegesis_result", () => {

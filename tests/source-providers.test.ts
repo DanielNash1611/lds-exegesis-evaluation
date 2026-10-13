@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { findExegesisSources, renderExegesisResult } from "../src/mcp/tools.js";
 import { SchemaCitationValidator } from "../src/services/citations/index.js";
-import { completeEvaluation } from "./evaluation-schema.test.js";
+import { completeEvaluation } from "./fixtures/evaluation.js";
 
 describe("fixture-backed exegesis source providers", () => {
   it("returns modern prophetic and LDS scholarship candidates for Mosiah 2:17 service queries", async () => {

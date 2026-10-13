@@ -13,7 +13,8 @@
     "test": "vitest run",
     "mcp:http": "tsx src/mcp/http-server.ts",
     "mcp:stdio": "tsx src/mcp/server.ts",
-    "start": "tsx src/mcp/http-server.ts"
+    "start": "tsx src/mcp/http-server.ts",
+    "test:built-mcp": "node scripts/smoke-mcp.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/ext-apps": "^1.7.4",
