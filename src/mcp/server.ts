@@ -1,3 +1,4 @@
+import { INPUT_LIMITS } from "./input-limits.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { registerAppResource, registerAppTool, RESOURCE_MIME_TYPE } from "@modelcontextprotocol/ext-apps/server";
@@ -43,7 +44,7 @@ function textResult(text: string, structuredContent: unknown) {
 export function createExegesisMcpServer(recordUsage?: (name: "scripture_fetched" | "sources_found" | "evaluation_requested" | "evaluation_completed" | "result_rendered") => Promise<void>) {
   const server = new McpServer(
     { name: "lds-exegesis-evaluation-assistant", version: "0.1.0" },
-    { instructions: EXEGESIS_SERVER_INSTRUCTIONS }
+    { instructions: EXEGESIS_SERVER_INSTRUCTIONS, maxToolInputElements: INPUT_LIMITS.elements }
   );
 
   registerAppResource(
