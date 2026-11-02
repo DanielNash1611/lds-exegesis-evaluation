@@ -75,3 +75,9 @@ The local package deliberately omits `.app.json` until ChatGPT creates a real De
 ## Source Boundaries
 
 The scripture and exegesis source data are local fixtures for deterministic development. Modern prophetic and LDS scholarship source candidates are metadata only. Do not add scraping or long copyrighted quotations without a documented source/license policy.
+
+## Request limits
+
+64 KiB bodies, 1024 keys/array elements, 8192 characters per string/key, depth 16. A complete evaluation fixture is under 5 KiB and 120 elements.
+
+Limits apply to the entire decoded JSON request before SDK/schema validation or tool work, including unknown fields. Actual streamed bytes are counted, even without Content-Length. Compressed requests are rejected (415); malformed JSON returns 400; exceeded budgets return 413. Where present, MCP servers also enable the SDK tool-element cap. Limits apply to the supported HTTP server and legacy HTTP entrypoints. Outbound responses are not truncated by these input controls.
